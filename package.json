@@ -1,6 +1,7 @@
 {
-	"name": "vite-template-react",
-	"version": "1.4.0",
+	"name": "congruent",
+	"version": "1.0.1",
+	"homepage": "https://logicallyminded.github.io/Congruent/",
 	"type": "module",
 	"scripts": {
 		"start": "vite --port 3000 --open",
