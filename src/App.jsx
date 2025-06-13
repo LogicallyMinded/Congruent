@@ -20,13 +20,13 @@ const App = () => {
           <ParallaxLayer offset={0} speed={0.1}>
             <div class="animation-layer parallax" id="stars"></div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.3}>
+          <ParallaxLayer offset={0} speed={0.4}>
             <div class="animation-layer parallax" id="moon"></div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.1}>
+          <ParallaxLayer offset={0} speed={0.2}>
             <div class="animation-layer parallax" id="surface"></div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.2}>
+          <ParallaxLayer offset={0} speed={0.1}>
             <div class="animation-layer parallax" id="programmer"></div>
           </ParallaxLayer>
         </Parallax>
