@@ -7,12 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,15 +22,66 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 button {
   font-size: calc(10px + 2vmin);
+}
+
+.animation, .animation-layer {
+  height: 1000px;
+}
+
+.animation {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.animation-layer {
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.animation-layer.parallax {
+  position: fixed;
+}
+
+#stars {
+  background-image: url('/images/stars.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh; /* or whatever height you want */
+}
+
+#moon {
+  background-image: url('/images/moon.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100vw;      /* or a fixed width if you prefer */
+  height: 100vh;     /* or a fixed height */
+}
+
+#surface {
+  background-image: url('/images/MarsSurface_noBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh; /* or whatever height you want */
+}
+
+#programmer {
+  background-image: url('/images/space_programmer.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100vw;      /* or a fixed width if you prefer */
+  height: 100vh;     /* or a fixed height */
 }
