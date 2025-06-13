@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #020607;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -57,31 +57,58 @@ button {
   background-position: center center;
   width: 100vw;
   height: 100vh; /* or whatever height you want */
+  position: fixed;
 }
 
 #moon {
   background-image: url('/images/moon.png');
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center center;
   width: 100vw;      /* or a fixed width if you prefer */
   height: 100vh;     /* or a fixed height */
 }
 
-#surface {
-  background-image: url('/images/MarsSurface_noBackground.png');
+#clouds_top {
+  background-image: url('/images/clouds.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100vw;
+  height: 100vh; /* or your desired height */
+  /*position: absolute;
+  top: 500px;*/
+}
+
+#clouds {
+  background-image: url('/images/clouds.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100vw;
+  height: 100vh; /* or your desired height */
+  position: absolute;
+  top: -600px;
+}
+
+#clouds_invert {
+  background-image: url('/images/clouds_invert.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100vw;
+  height: 100vh; /* or your desired height */
+  position: absolute;
+  top: -850px;
+  left: -300px;
+}
+
+#space_from_earth {
+  background-image: url('/images/space_from_earth.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100vw;
   height: 100vh; /* or whatever height you want */
-}
-
-#programmer {
-  background-image: url('/images/space_programmer.png');
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  width: 100vw;      /* or a fixed width if you prefer */
-  height: 100vh;     /* or a fixed height */
+  position: fixed;
 }
