@@ -1,16 +1,44 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from './logo.png';
 import './App.css';
+import Loader from './components/Loader';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
+
+const imageList = [
+  "/images/stars.jpg",
+  "/images/moon.png",
+  "/images/meteor.png",
+  "/images/meteor2.png",
+  "/images/meteor3.png",
+  "/images/clouds_top.png",
+  "/images/space_from_earth.png",
+  "/images/clouds.png",
+  "/images/clouds_invert.png",
+  // add all your background images here
+];
+
+
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    let loadedCount = 0;
+    imageList.forEach(src => {
+      const img = new window.Image();
+      img.src = src;
+      img.onload = img.onerror = () => {
+        loadedCount++;
+        if (loadedCount === imageList.length) setLoaded(true);
+      };
+    });
+  }, []);
+
+  if (!loaded) return <Loader />;
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Future Content</h1>
         <Parallax pages={4} style={{ top: '0', left: '0' }} class="animation">
           <ParallaxLayer offset={0} speed={0}>
             <div class="animation-layer parallax" id="stars"></div>
@@ -46,6 +74,10 @@ const App = () => {
           </ParallaxLayer>
           <ParallaxLayer offset={2} speed={0.3}>
             <div class="animation-layer parallax" id="clouds_invert"></div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={3} speed={0}>
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1>Future Content</h1>
           </ParallaxLayer>
         </Parallax>
       </header>
