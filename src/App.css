@@ -22,6 +22,15 @@
   color: #61dafb;
 }
 
+.loader {
+  color: #fff;
+  background: #000;
+  font-size: 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 button {
   font-size: calc(10px + 2vmin);
