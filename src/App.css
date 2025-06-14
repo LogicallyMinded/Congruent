@@ -27,6 +27,15 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+.congruent-text {
+  color: white;
+  font-family: fantasy, sans-serif;
+  font-size: calc(50px + 2vmin);
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+
 .animation, .animation-layer {
   height: 1000px;
 }
@@ -67,6 +76,70 @@ button {
   background-position: center center;
   width: 100vw;      /* or a fixed width if you prefer */
   height: 100vh;     /* or a fixed height */
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.meteor {
+  animation: spin 10s linear infinite; /* 2s per rotation, adjust as needed */
+  /* Optional: set transform-origin if you want to rotate around a specific point */
+  /* transform-origin: center center; */
+}
+
+.meteor2 {
+  animation: spin 20s linear infinite; /* 2s per rotation, adjust as needed */
+  /* Optional: set transform-origin if you want to rotate around a specific point */
+  /* transform-origin: center center; */
+}
+
+.meteor3 {
+  animation: spin 100s linear infinite; /* 2s per rotation, adjust as needed */
+  /* Optional: set transform-origin if you want to rotate around a specific point */
+  /* transform-origin: center center; */
+}
+
+.moon {
+  animation: spin 500s linear infinite;
+  transform-style: preserve-3d;
+}
+
+#meteor {
+  background-image: url('/images/meteor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 600px;      /* or a fixed width if you prefer */
+  height: 600px;     /* or a fixed height */
+  position: absolute;
+  top: -1200px;
+  left: 300px;
+}
+
+#meteor2 {
+  background-image: url('/images/meteor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 800px;      /* or a fixed width if you prefer */
+  height: 800px;     /* or a fixed height */
+  position: absolute;
+  top: -1500px;
+  right: 300px;
+}
+
+#meteor3 {
+  background-image: url('/images/meteor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 1800px;      /* or a fixed width if you prefer */
+  height: 1800px;     /* or a fixed height */
+  position: absolute;
+  top: -800px;
+  left: 600px;
 }
 
 #clouds_top {

@@ -15,11 +15,25 @@ const App = () => {
           <ParallaxLayer offset={0} speed={0}>
             <div class="animation-layer parallax" id="stars"></div>
           </ParallaxLayer>
+          <ParallaxLayer offset={0} speed={0}>
+            <div class="congruent-text">
+              CONGRUENT
+            </div>
+          </ParallaxLayer>
           <ParallaxLayer offset={0} speed={0.4}>
-            <div class="animation-layer parallax" id="moon"></div>
+            <div class="animation-layer parallax moon" id="moon"></div>
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0}>
             <div class="animation-layer parallax" id="stars"></div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={1} speed={2.5}>
+            <div class="animation-layer parallax meteor" id="meteor"></div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={1} speed={1.5}>
+            <div class="animation-layer parallax meteor2" id="meteor2"></div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={1} speed={0.8}>
+            <div class="animation-layer parallax meteor3" id="meteor3"></div>
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.4}>
             <div class="animation-layer parallax" id="clouds_top"></div>
